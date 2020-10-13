@@ -2,24 +2,21 @@ package com.vjsb.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringHelloApp {
+public class SetterDemoApp {
 
 	public static void main(String[] args) {
 		
-		// Load the spring configuration file
+		// load the spring configuration file
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve bean from spring container
-		Coach theCoach = context.getBean("myCoach", Coach.class);
+		CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		
-		// call methods on the bean
-		System.out.println(theCoach.getDailyWorkout());
+		// call method on the bean
+		// ...let's come back to this...
 		
-		// let's call our new methods for the fortunes
-		System.out.println(theCoach.getDailyFortune());
 		// close the context
 		context.close();
-		
 	}
 
 }
