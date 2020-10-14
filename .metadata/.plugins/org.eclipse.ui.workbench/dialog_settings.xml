@@ -6,7 +6,7 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
-			<item value="org.eclipse.ui.newWizard(newWizardId=org.eclipse.pde.ui.NewSchemaFileWizard)"/>
+			<item value="org.eclipse.ui.newWizard(newWizardId=org.eclipse.wst.server.ui.new.server)"/>
 			<item value="org.eclipse.wst.server.ui.ServersView"/>
 		</list>
 		<list key="orderedProviders">
@@ -15,16 +15,17 @@
 		</list>
 		<list key="textEntries">
 			<item value="1"/>
-			<item value="1"/>
+			<item value="2"/>
 		</list>
 		<list key="textArray">
-			<item value="extension"/>
+			<item value="new server"/>
 			<item value="ser"/>
+			<item value="servers"/>
 		</list>
 	</section>
 	<section name="InstallationDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="166"/>
-		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="-251"/>
 		<item key="DIALOG_WIDTH" value="930"/>
 		<item key="DIALOG_HEIGHT" value="978"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
