@@ -25,7 +25,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 				
 		// create a query ... sort by last name
 		Query<Employee> theQuery = 
-				currentSession.createQuery("from Employee order by firstName", Employee.class);
+				currentSession.createQuery("from Employee", Employee.class);
 		
 		// execute query and get result list
 		List<Employee> employee = theQuery.getResultList();

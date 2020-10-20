@@ -1,0 +1,48 @@
+* {
+	box-sizing: border-box
+}
+
+/* Add padding to containers */
+.form_container {
+	margin-right: 15px;
+	border: 1px solid #3D3D3D;
+}
+
+.form {
+	position: absolute;
+	padding: 25px;
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+/* Full-width input fields */
+#first, #last, #email {
+	width: 300px;
+	display: inline-block;
+	border: 1px solid #9CCC65;
+	background: #FFFFFF;
+}
+
+/* Overwrite default styles of hr */
+hr {
+	border: 1px solid #FFFFFF;
+	margin-bottom: 25px;
+	color: #FFFFFF;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+	font-family: montserrat;
+	border: 1px solid #4CAF50;
+	border-radius: 5px;
+	padding: 4px;
+	font-size: 11px;
+	font-weight: bold;
+	width: 300px;
+	padding: 5px 10px;
+	color: #FFFFFF;
+	cursor: pointer;
+	margin-bottom: 0px;
+	background-color: #4CAF50;
+}

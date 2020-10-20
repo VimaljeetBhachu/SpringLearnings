@@ -1,69 +1,61 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Add Employee</title>
+<title>Add Employee</title>
 
-	<link type="text/css"
-		  rel="stylesheet"
-		  href="${pageContext.request.contextPath}/resources/css/style.css">
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/style.css">
 
-	<link type="text/css"
-		  rel="stylesheet"
-		  href="${pageContext.request.contextPath}/resources/css/add-employee-style.css">
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/add-employee-style.css">
+
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/form.css">
 </head>
 
 <body>
-	
+
 	<div id="wrapper">
 		<div id="header">
-			<h2>Employee Details</h2>
+			<div class="heading_div">
+				<h2>Employee Details</h2>
+			</div>
 		</div>
 	</div>
 
-	<div id="container">
-		<h3>Add Employee</h3>
-	
-		<form:form action="saveEmployee" modelAttribute="employee" method="POST">
-		
-			
-			<table>
-				<tbody>
-					<tr>
-						<td><label>First name:</label></td>
-						<td><form:input path="firstName" /></td>
-					</tr>
-				
-					<tr>
-						<td><label>Last name:</label></td>
-						<td><form:input path="lastName" /></td>
-					</tr>
+	<div class="form_container">
 
-					<tr>
-						<td><label>Email:</label></td>
-						<td><form:input path="email" /></td>
-					</tr>
+		<div class="form">
 
-					<tr>
-						<td><label></label></td>
-						<td><input type="submit" value="Save" class="save" /></td>
-					</tr>
+			<form:form action="saveEmployee" modelAttribute="employee"
+				method="POST">
+				<div class="center">
+					<h1>Add Employee</h1>
+					<p>Please fill in Details to add Employee</p>
 
-				
-				</tbody>
-			</table>
-		
-		
-		</form:form>
-	
-		<div style="clear; both;"></div>
-		
-		<p>
-			<a href="${pageContext.request.contextPath}/employee/list">Back to List</a>
-		</p>
-	
+
+					<label><b>First Name</b></label>
+					<form:input path="firstName" id="first" />
+
+					<label><b>Last Name</b></label>
+					<form:input path="lastName" id="last" />
+					
+					<label><b>Email</b></label>
+					<form:input path="email" id="email" />
+					<hr> 
+
+					<button type="submit" value="Save" class="registerbtn">Register</button>
+
+					<p>
+						<a href="${pageContext.request.contextPath}/app/employee/app/list">Back</a>
+					</p>
+				</div>
+
+			</form:form>
+		</div>
 	</div>
 
 </body>

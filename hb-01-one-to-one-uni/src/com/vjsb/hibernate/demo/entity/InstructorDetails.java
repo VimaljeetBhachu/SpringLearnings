@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="instructor_details")
+@Table(name="instructor_detail")
 public class InstructorDetails {
 
 	// annotate the class as an entity and map to db table

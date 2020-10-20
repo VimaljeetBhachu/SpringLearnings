@@ -1,5 +1,6 @@
 package com.vjsb.project.controller;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import com.vjsb.project.entity.Employee;
 import com.vjsb.project.service.EmployeeService;
 
 @Controller
-@RequestMapping("/employee")
+@RequestMapping("/employee/app")
 public class EmployeeController {
 	
 	// need to inject the customer dao
@@ -44,13 +45,28 @@ public class EmployeeController {
 		return "employee-form";
 	}
 	
+	@GetMapping("/orderByFirstName")
+	public String orderByFirstName(Model model) {
+		List<Employee> theEmployee = employeeService.getEmployee();	
+		Collections.sort(theEmployee, Employee.empNameComparator);
+		model.addAttribute("employee", theEmployee);	
+			return "list-employee";
+	}
+	
+	@GetMapping("/orderById")
+	public String orderById(Model model) {
+		List<Employee> theEmployee = employeeService.getEmployee();	
+		Collections.sort(theEmployee, Employee.empIdComparator);
+		model.addAttribute("employee", theEmployee);	
+			return "list-employee";
+	}
 	@PostMapping("/saveEmployee")
 	public String saveEmployee(@ModelAttribute("employee") Employee theEmployee) {
 		 
 		// save the employee using our service
 		employeeService.saveEmployee(theEmployee);
 		
-		return "redirect:/employee/list";
+		return "redirect:/app/employee/app/list";
 	}
 	
 	@GetMapping("/showFormForUpdate")
@@ -73,6 +89,6 @@ public class EmployeeController {
 		// delete the customer
 		employeeService.deleteEmployee(theId);
 		
-		return "redirect:/employee/list";
+		return "redirect:/app/employee/app/list";
 	}
 }

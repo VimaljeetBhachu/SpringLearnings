@@ -1,5 +1,7 @@
 package com.vjsb.project.entity;
 
+import java.util.Comparator;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -61,6 +63,30 @@ public class Employee {
 		this.email = email;
 	}
 
+	public static Comparator<Employee> empNameComparator = new Comparator<Employee>() {
+
+		@Override
+		public int compare(Employee e1, Employee e2) {
+			String emp1 =  e1.getFirstName().toLowerCase();
+			String emp2 = e2.getFirstName().toLowerCase();
+			
+			return 	emp1.compareTo(emp2);
+		}
+			
+	};
+	
+	public static Comparator<Employee> empIdComparator = new Comparator<Employee>() {
+
+		@Override
+		public int compare(Employee e1, Employee e2) {
+			int emp1 =  e1.getId();
+			int emp2 = e2.getId();
+			
+			return 	Integer.compare(emp1, emp2);
+		}
+			
+	};
+	
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
