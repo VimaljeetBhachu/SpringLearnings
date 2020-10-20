@@ -1,7 +1,8 @@
-Servers
-*/lib
-/.metadata/
+/Servers
+/lib
+/.metadata
 /hb-05-many-to-many/lib
 /hb-04-one-to-many-uni/lib
 /hb-03-one-to-many/lib
 /hb-02-one-to-one-bi/lib
+/slf4j.jar
