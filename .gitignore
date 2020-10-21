@@ -38,3 +38,15 @@
 /spring-demo-aop-zz-around-with-logger/.classpath
 /spring-demo-aop-zz-around-with-logger/.project
 
+/spring-security-demo-02-basic-security/.settings
+/spring-security-demo-02-basic-security/target
+/spring-security-demo-02-basic-security/.classpath
+/spring-security-demo-02-basic-security/.DS_Store
+/spring-security-demo-02-basic-security/.project
+
+/spring-security-5-demo-starter/.DS_Store
+/spring-security-5-demo-starter/spring-security-demo-01-base-app/.settings
+/spring-security-5-demo-starter/spring-security-demo-01-base-app/target
+/spring-security-5-demo-starter/spring-security-demo-01-base-app/.classpath
+/spring-security-5-demo-starter/spring-security-demo-01-base-app/.DS_Store
+/spring-security-5-demo-starter/spring-security-demo-01-base-app/.project
