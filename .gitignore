@@ -80,3 +80,15 @@
 /spring-security-demo-07-user-roles/.classpath
 /spring-security-demo-07-user-roles/.DS_Store
 /spring-security-demo-07-user-roles/.project
+
+/jackson-databinding-json-demo/.settings
+/jackson-databinding-json-demo/target
+/jackson-databinding-json-demo/.classpath
+/jackson-databinding-json-demo/.DS_Store
+/jackson-databinding-json-demo/.project
+
+/spring-rest-demo/.seetings
+/spring-rest-demo/target
+/spring-rest-demo/.classpath
+/spring-rest-demo/.DS_Store
+/spring-rest-demo/.project

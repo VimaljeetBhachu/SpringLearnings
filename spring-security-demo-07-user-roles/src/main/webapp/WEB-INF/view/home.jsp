@@ -1,5 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="security"
+	uri="http://www.springframework.org/security/tags"%>
 
 <html>
 
@@ -14,14 +15,23 @@
 	<p>Welcome to the Vjsb company home page!</p>
 
 	<hr>
-	
+
 	<!-- display user name and role -->
 	<p>
-		User: <security:authentication property="principal.username"/>
-		<br><br>
-		Role(s): <security:authentication property="principal.authorities" />
+		User:
+		<security:authentication property="principal.username" />
+		<br>
+		<br> Role(s):
+		<security:authentication property="principal.authorities" />
 	</p>
-	
+
+	<hr>
+
+	<!-- Add a link to point to /leaders ... this is for the Managers -->
+
+	<p>
+		<a href="${pageContext.request.contextPath }/leaders">Leadership Meeting</a>
+	</p>
 	<hr>
 
 
@@ -30,8 +40,8 @@
 	<form:form action="${pageContext.request.contextPath}/logout"
 		method="POST">
 
-		<input type="submit" value="Logout"/>
-		
+		<input type="submit" value="Logout" />
+
 	</form:form>
 
 </body>
